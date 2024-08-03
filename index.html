@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Section</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="styles.css">
+<style>
+/* About Section Styles */
+.about-section {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #f8f9fa; /* Light grey background for a clean look */
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #343a40; /* Dark grey color for the heading */
+  font-weight: 600; /* Moderate boldness for an elegant appearance */
+}
+
+.about-section img {
+  width: 200px; /* Fixed size */
+  height: 200px;
+  border-radius: 50%; /* Round image */
+  margin-bottom: 20px;
+  border: 3px solid #007bff; /* Primary color border */
+}
+
+.about-section p {
+  color: #555555; /* Medium grey for readability */
+  font-size: 1.1rem; /* Slightly larger font size */
+  line-height: 1.6; /* Increased line height for readability */
+  margin: 0 auto 20px auto; /* Centered text with bottom margin */
+  max-width: 800px; /* Maximum width for text blocks */
+}
+
+.about-section p:last-child {
+  margin-bottom: 0; /* Remove bottom margin from the last paragraph */
+}
+
+
+/* Additional CSS for Projects Section */
+.projects-section {
+  padding: 40px 0; /* Reduced padding to fit the content better */
+}
+
+.projects-section h2 {
+  margin-bottom: 30px; /* Reduced margin for a more compact heading */
+  font-size: 2rem; /* Slightly smaller font size for the heading */
+  text-align: center; /* Center-align the section heading */
+  color: #333; /* Darker color for better readability */
+}
+
+.card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slightly lighter shadow for a less pronounced effect */
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Rounded corners for the card */
+  overflow: hidden; /* Ensure the card content doesn't overflow */
+  display: flex;
+  flex-direction: column; /* Stack card content vertically */
+  height: 100%; /* Ensure all cards have the same height */
+  margin-bottom: 20px; /* Add space between cards */
+}
+
+.card-img-top {
+  height: 160px; /* Reduced height for a more compact look */
+  object-fit: cover; /* Ensure the image covers the card area properly */
+  border-bottom: 1px solid #ddd; /* Add a border for separation */
+}
+
+.card-body {
+  padding: 15px; /* Reduced padding for a more compact look */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Distribute space evenly */
+}
+
+.card-title {
+  font-size: 1.25rem; /* Slightly smaller font size for better fit */
+  margin-bottom: 10px; /* Reduced margin for a more compact title */
+  color: #007bff; /* Color matching the button */
+}
+
+.card-text {
+  font-size: 0.875rem; /* Slightly smaller font size for a more compact description */
+  margin-bottom: 10px; /* Reduced margin for better spacing */
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+  border-radius: 4px; /* Slightly rounded corners */
+  padding: 8px 16px; /* Slightly reduced padding for a compact look */
+  text-align: center;
+  display: inline-block;
+  font-size: 0.875rem; /* Slightly smaller font size */
+  transition: background-color 0.2s, border-color 0.2s; /* Smooth transition effect */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  color: #fff;
+}
+
+
+
+/* Additional CSS for Skills Section */
+.skills-section {
+  padding: 60px 0;
+  background-color: #f8f9fa; /* Light background for the section */
+}
+
+.skills-section h2 {
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  text-align: center; /* Center align the heading */
+  color: #343a40; /* Dark color for contrast */
+}
+
+.skills-section .card {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Enhanced shadow for depth */
+  border-radius: 10px; /* Rounded corners for a modern look */
+  height: 100%; /* Ensure all cards have the same height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.skills-section .card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Deeper shadow on hover */
+}
+
+.skills-section .card-img-top {
+  padding: 20px; /* Padding around images */
+  background-color: #e9ecef; /* Light background for images */
+  height: 180px; /* Consistent height */
+  object-fit: contain; /* Ensure the image is not cropped and fits within the container */
+  border-bottom: 1px solid #dee2e6; /* Subtle border for separation */
+}
+
+.skills-section .card-body {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allow body to grow */
+}
+
+.skills-section .card-title {
+  font-size: 1.5rem; /* Larger title for emphasis */
+  margin-bottom: 10px; /* Reduced margin for compact look */
+  color: #007bff; /* Primary color for title */
+  text-align: center; /* Center align title */
+}
+
+.skills-section .card-text {
+  margin-bottom: 20px; /* More space below text */
+  flex-grow: 1; /* Allow text to grow */
+  text-align: center; /* Center align text */
+  color: #6c757d; /* Secondary color for text */
+}
+
+.skills-section .btn-outline-primary {
+  color: #007bff;
+  border-color: #007bff;
+  align-self: center; /* Center the button in the card */
+  padding: 10px 20px; /* Adjust padding for the button */
+  border-radius: 20px; /* Rounded corners for the button */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.skills-section .btn-outline-primary:hover {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+
+
+/* Additional CSS for Contact Section */
+.contact-section {
+  padding: 50px 0;
+  background: linear-gradient(135deg, #f4f4f4 0%, #e0e0e0 100%); /* Soft gradient background */
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333; /* Dark text for contrast */
+}
+
+.contact-section p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #666; /* Subtle text color */
+}
+
+.social-icon {
+  width: 50px; /* Size of your icons */
+  margin-bottom: 10px;
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+/* Hover effect for icons */
+.social-icon:hover {
+  opacity: 0.7;
+}
+
+/* Style for links in the Contact section */
+.contact-section a {
+  color: #007bff; /* Primary link color */
+  text-decoration: none; /* Removes underline from links */
+  display: inline-block; /* Allows for margin on the bottom */
+  margin-bottom: 10px;
+  font-weight: 500;
+  transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+.contact-section a:hover {
+  color: #0056b3; /* Darker shade on hover */
+}
+
+/* CSS for Sticky Navbar */
+.navbar {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adds a shadow for depth */
+  background: #343a40; /* Dark background for navbar */
+  color: #fff; /* Light text color for contrast */
+}
+
+
+/* Ensure padding is added to body to avoid content being hidden behind the navbar */
+body { 
+  padding-top: 56px; /* Adjust this value based on the height of your navbar */
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Style for navigation bar links */
+.navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f8f9fa; /* Slightly lighter white when hovering over links */
+}
+
+/* Media query for responsive navbar collapsing */
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background-color: #343a40; /* Same as navbar color for seamless look */
+  }
+}
+
+
+/* Sticky Navigation Bar Styles */
+.navbar {
+  background: linear-gradient(135deg, #343a40 0%, #6c757d 100%);
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #f8f9fa;
+}
+
+.navbar-nav .nav-link {
+  color: #e9ecef;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" viewBox="0 0 16 16"><path d="M2 4h12a1 1 0 0 1 0 2H2a1 1 0 0 1 0-2zm0 4h12a1 1 0 0 1 0 2H2a1 1 0 0 1 0-2zm0 4h12a1 1 0 0 1 0 2H2a1 1 0 0 1 0-2z"/></svg>');
+}
+
+.navbar-collapse {
+  margin-left: auto;
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: center;
+    width: 100%;
+    background: linear-gradient(135deg, #343a40 0%, #6c757d 100%);
+    padding-top: 10px;
+  }
+  
+  .navbar-nav .nav-item {
+    margin: 10px 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-nav {
+    display: flex;
+  }
+  
+  .navbar-nav .nav-item {
+    margin: 0;
+  }
+}
+
+
+/* Contact Section */
+.contact-section {
+  padding: 60px 0;
+  background-color: #f8f9fa; /* Light background for the contact section */
+}
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #343a40; /* Dark color for the heading */
+}
+.contact-form-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.contact-form-wrapper form {
+  max-width: 600px;
+  width: 100%;
+  background-color: #ffffff; /* White background for the form */
+  padding: 30px;
+  border-radius: 10px; /* Slightly more rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-form-wrapper form:hover {
+  transform: scale(1.02); /* Slight scale effect on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #495057; /* Slightly lighter dark color for labels */
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dee2e6; /* Lighter border color */
+  border-radius: 5px; /* Slightly rounded corners */
+  font-size: 1rem;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  transition: border-color 0.3s ease;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #0056b3; /* Slightly different color for focus state */
+  outline: none; /* Remove default outline */
+}
+.form-group textarea {
+  resize: vertical; /* Allow vertical resizing */
+}
+button.btn-primary {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #0056b3; /* Darker blue background for the button */
+  border: none;
+  border-radius: 5px; /* Slightly rounded corners for the button */
+  color: #ffffff; /* White text for the button */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+button.btn-primary:hover {
+  background-color: #003d7a; /* Even darker blue on hover */
+  transform: scale(1.02); /* Slight scale effect on hover */
+}
+button.btn-primary:active {
+  transform: scale(0.98); /* Slightly scale down on click */
+}
+
+
+
+
+</style>
+
+</head>
+<body>
+
+<!-- About Section -->
+<section id="about" class="about-section">
+  <div class="container">
+    <h2>About Me</h2>
+    <img src="images/about/4.png" alt="About Me">
+    <p>I'm Mohammad Kattubadi, a Data Science professional specializing in machine learning and data analysis. I hold a B.Tech from JNTUK University and have pursued advanced certifications from ExcelR and RapidMiner. My expertise is showcased through projects like a book recommendation system and a resume classification tool, where I applied sophisticated algorithms to tackle real-world challenges.</p>
+    <p>Currently, as an E-commerce Operations Specialist at Lavian LLP, I harness Python and SQL to drive data-driven strategies and optimize e-commerce processes. My goal is to leverage data science to enhance business efficiency and deliver actionable insights.</p>
+  </div>
+</section>
+
+
+<!-- Projects Section -->
+<section id="projects" class="projects-section bg-light">
+  <div class="container">
+    <h2 class="text-center">Projects</h2>
+    <div class="row">
+      <!-- Books Recommendation System -->
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="images/projects/book-recommendation.jpg" class="card-img-top" alt="Books Recommendation System">
+          <div class="card-body">
+            <h5 class="card-title">Books Recommendation System</h5>
+            <p class="card-text">Developed a recommendation system using collaborative filtering and matrix factorization to suggest books based on user preferences. This project highlights expertise in machine learning and data analysis.</p>
+            <a href="https://github.com/kattubadimohammad/Book-Recommendation-System" class="btn btn-primary" target="_blank">View Code</a>
+          </div>
+        </div>
+      </div>
+      <!-- Resume Classification System -->
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="images/projects/resume-classification.jpg" class="card-img-top" alt="Resume Classification System">
+          <div class="card-body">
+            <h5 class="card-title">Resume Classification System</h5>
+            <p class="card-text">Built a system to classify resumes using NLP techniques to assist in the recruitment process. The system categorizes resumes based on skills, experience, and other relevant criteria, demonstrating NLP capabilities.</p>
+            <a href="https://github.com/kattubadimohammad/Resume-Classification" class="btn btn-primary" target="_blank">View Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gravity Motors -->
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="images/projects/gravity-motors.jpg" class="card-img-top" alt="Gravity Motors Website">
+          <div class="card-body">
+            <h5 class="card-title">Gravity Motors</h5>
+            <p class="card-text">Built a user-friendly website for Gravity Motors, featuring sections like 'Home,' 'About,' 'Services,' 'Workshops,' 'Gallery,' and 'Contact.' The site showcases the company’s services with a service catalog, workshop details, and a contact form, demonstrating effective web design and functionality.</p>
+            <a href="https://gravitymotorshub.com/" class="btn btn-primary" target="_blank">Visit Site</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills-section bg-white">
+  <div class="container">
+    <h2 class="text-center">Skills</h2>
+    <div class="row">
+      <!-- Skill 1: Python -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card">
+          <img src="images/skills/1.png" class="card-img-top" alt="Python">
+          <div class="card-body">
+            <h5 class="card-title">Python</h5>
+            <p class="card-text">Python is a versatile programming language widely used for data science, machine learning, and web development. It’s known for its readability and ease of use.</p>
+            <a href="https://www.coursera.org/specializations/python" class="btn btn-outline-primary" target="_blank">Python for Everybody Specialization by Coursera</a>
+          </div>
+        </div>
+      </div>
+      <!-- Skill 2: Data Visualization -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card">
+          <img src="images/skills/2.png" class="card-img-top" alt="Data Visualization">
+          <div class="card-body">
+            <h5 class="card-title">Data Visualization</h5>
+            <p class="card-text">Data Visualization involves presenting data in graphical formats to make it easier to understand patterns, trends, and insights.</p>
+            <a href="https://www.datacamp.com/courses/introduction-to-data-visualization-with-python" class="btn btn-outline-primary" target="_blank">Introduction to Data Visualization with Python by DataCamp</a>
+          </div>
+        </div>
+      </div>
+      <!-- Skill 3: SQL -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card">
+          <img src="images/skills/3.png" class="card-img-top" alt="SQL">
+          <div class="card-body">
+            <h5 class="card-title">SQL</h5>
+            <p class="card-text">SQL (Structured Query Language) is used for managing and manipulating relational databases. It's essential for querying and organizing data.</p>
+            <a href="https://www.coursera.org/learn/sql-for-data-science" class="btn btn-outline-primary" target="_blank">SQL for Data Science by Coursera</a>
+          </div>
+        </div>
+      </div>
+      <!-- Skill 4: Data Storytelling -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card">
+          <img src="images/skills/4.png" class="card-img-top" alt="Data Storytelling">
+          <div class="card-body">
+            <h5 class="card-title">Data Storytelling</h5>
+            <p class="card-text">Data Storytelling involves using data to craft compelling narratives that make complex information understandable and engaging.</p>
+            <a href="https://www.pluralsight.com/courses/data-storytelling-fundamentals" class="btn btn-outline-primary" target="_blank">Data Storytelling by LinkedIn Learning</a>
+          </div>
+        </div>
+      </div>
+      <!-- Skill 5: Machine Learning -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card">
+          <img src="images/skills/5.png" class="card-img-top" alt="Machine Learning">
+          <div class="card-body">
+            <h5 class="card-title">Machine Learning</h5>
+            <p class="card-text">Machine Learning is a subset of AI that focuses on building systems that learn from and make decisions based on data.</p>
+            <a href="https://www.coursera.org/learn/machine-learning" class="btn btn-outline-primary" target="_blank">Machine Learning by Coursera (Andrew Ng)</a>
+          </div>
+        </div>
+      </div>
+      <!-- Skill 6: Natural Language Processing -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card">
+          <img src="images/skills/6.png" class="card-img-top" alt="Natural Language Processing">
+          <div class="card-body">
+            <h5 class="card-title">Natural Language Processing</h5>
+            <p class="card-text">Natural Language Processing (NLP) enables machines to understand and interpret human language. It’s crucial for tasks like text analysis and language generation.</p>
+            <a href="https://www.coursera.org/learn/classification-vector-spaces-in-nlp" class="btn btn-outline-primary" target="_blank">Natural Language Processing with Classification and Vector Spaces by Coursera</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section">
+  <div class="container">
+    <h2>Get in Touch</h2>
+    <div class="contact-form-wrapper">
+      <form id="contact-form" action="https://getform.io/f/bolgqdka" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Subject" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Me Section -->
+<section id="contact" class="contact-section text-center text-white bg-dark">
+  <div class="container">
+    <h2>Contact Me</h2>
+    <div class="row">
+      <div class="col-lg-6">
+        <p><i class="fas fa-envelope"></i> miraclemohammad786@gmail.com</p>
+      </div>
+      <div class="col-lg-6">
+        <p><i class="fas fa-phone"></i> 6304396311</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-2 col-md-4 mb-4">
+        <a href="https://linkedin.com/in/kattubadi-mohammad/" target="_blank">
+          <img src="icons/linkedin.png" alt="LinkedIn" class="social-icon">
+          LinkedIn
+        </a>
+      </div>
+      <div class="col-lg-2 col-md-4 mb-4">
+        <a href="https://twitter.com/kmohammad552" target="_blank">
+          <img src="icons/twitter.png" alt="Twitter" class="social-icon">
+          Twitter
+        </a>
+      </div>
+      <div class="col-lg-2 col-md-4 mb-4">
+        <a href="https://github.com/kattubadimohammad" target="_blank">
+          <img src="icons/github.png" alt="GitHub" class="social-icon">
+          GitHub
+        </a>
+      </div>
+      <div class="col-lg-2 col-md-4 mb-4">
+        <a href="https://medium.com/@miraclemohammad786" target="_blank">
+          <img src="icons/medium.png" alt="Medium" class="social-icon">
+          Medium
+        </a>
+      </div>
+      <div class="col-lg-2 col-md-4 mb-4">
+        <a href="https://www.youtube.com/@Mkofficial52" target="_blank">
+          <img src="icons/youtube.png" alt="YouTube" class="social-icon">
+          YouTube
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sticky Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#home">Portfolio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Bootstrap JS and dependencies (jQuery and Popper) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.5/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Smooth Scroll library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.polyfills.min.js"></script>
+<!-- Link to your custom JavaScript file -->
+<script src="script.js"></script>
+
+</body>
+</html>
