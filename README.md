@@ -29,7 +29,7 @@ CopyPortfolio.Mohammad/
 Getting Started
 
 Clone the repo:
-Copygit clone https://github.com/kattubadimohammad/Portfolio.Mohammad.git
+Copygit clone https://github.com/kattubadimohammad/TechWithMohammad.git
 
 Navigate to the project:
 Copycd Portfolio.Mohammad
