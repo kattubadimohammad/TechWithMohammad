@@ -43,7 +43,7 @@ Adjust styles to match your preferences
 Update images in the images/ directory
 
 Live Demo
-Visit the live site: https://kattubadimohammad.github.io/Portfolio.Mohammad/
+Visit the live site: https://kattubadimohammad.github.io/TechWithMohammad/
 To update:
 
 Make local changes
