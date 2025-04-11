@@ -167,67 +167,111 @@
 .skills-section h2 {
   margin-bottom: 40px;
   font-size: 2.5rem;
-  text-align: center; /* Center align the heading */
+  text-align: center;
   color: #343a40; /* Dark color for contrast */
 }
 
+/* Skill Cards */
 .skills-section .card {
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Enhanced shadow for depth */
-  border-radius: 10px; /* Rounded corners for a modern look */
-  height: 100%; /* Ensure all cards have the same height */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Enhanced shadow */
+  border-radius: 10px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
 }
 
+/* Animation delays for multiple cards */
+.skills-section .card:nth-child(1) { animation-delay: 0.1s; }
+.skills-section .card:nth-child(2) { animation-delay: 0.2s; }
+.skills-section .card:nth-child(3) { animation-delay: 0.3s; }
+.skills-section .card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Hover effect */
 .skills-section .card:hover {
-  transform: translateY(-5px); /* Slight lift on hover */
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Deeper shadow on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
+/* Card Image Styling */
 .skills-section .card-img-top {
-  padding: 20px; /* Padding around images */
-  background-color: #e9ecef; /* Light background for images */
-  height: 180px; /* Consistent height */
-  object-fit: contain; /* Ensure the image is not cropped and fits within the container */
-  border-bottom: 1px solid #dee2e6; /* Subtle border for separation */
+  padding: 20px;
+  background-color: #e9ecef;
+  height: 180px;
+  object-fit: contain;
+  border-bottom: 1px solid #dee2e6;
 }
 
+/* Card Body */
 .skills-section .card-body {
   padding: 15px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* Allow body to grow */
+  flex-grow: 1;
 }
 
+/* Title */
 .skills-section .card-title {
-  font-size: 1.5rem; /* Larger title for emphasis */
-  margin-bottom: 10px; /* Reduced margin for compact look */
-  color: #007bff; /* Primary color for title */
-  text-align: center; /* Center align title */
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #007bff;
+  text-align: center;
 }
 
+/* Description */
 .skills-section .card-text {
-  margin-bottom: 20px; /* More space below text */
-  flex-grow: 1; /* Allow text to grow */
-  text-align: center; /* Center align text */
-  color: #6c757d; /* Secondary color for text */
+  margin-bottom: 20px;
+  flex-grow: 1;
+  text-align: center;
+  color: #6c757d;
 }
 
+/* Button */
 .skills-section .btn-outline-primary {
   color: #007bff;
   border-color: #007bff;
-  align-self: center; /* Center the button in the card */
-  padding: 10px 20px; /* Adjust padding for the button */
-  border-radius: 20px; /* Rounded corners for the button */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  align-self: center;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .skills-section .btn-outline-primary:hover {
   color: #fff;
   background-color: #007bff;
   border-color: #007bff;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Tweaks */
+@media (max-width: 576px) {
+  .skills-section h2 {
+    font-size: 2rem;
+  }
+
+  .skills-section .card-title {
+    font-size: 1.2rem;
+  }
+
+  .skills-section .card-text {
+    font-size: 0.95rem;
+  }
+
+  .skills-section .card-img-top {
+    height: 150px;
+    padding: 15px;
+  }
 }
 
 
