@@ -276,85 +276,131 @@
 
 
 
-/* Additional CSS for Contact Section */
+/* --- Contact Section --- */
 .contact-section {
-  padding: 50px 0;
-  background: linear-gradient(135deg, #f4f4f4 0%, #e0e0e0 100%); /* Soft gradient background */
+  padding: 60px 0;
+  background: linear-gradient(135deg, #f4f4f4 0%, #e0e0e0 100%);
 }
 
 .contact-section h2 {
   font-size: 2.5rem;
   margin-bottom: 40px;
-  color: #333; /* Dark text for contrast */
+  text-align: center;
+  color: #333;
 }
 
 .contact-section p {
   font-size: 1.2rem;
   margin-bottom: 20px;
-  color: #666; /* Subtle text color */
+  color: #666;
 }
 
 .social-icon {
-  width: 50px; /* Size of your icons */
+  width: 50px;
   margin-bottom: 10px;
-  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover effect for icons */
 .social-icon:hover {
   opacity: 0.7;
+  transform: scale(1.1);
 }
 
-/* Style for links in the Contact section */
 .contact-section a {
-  color: #007bff; /* Primary link color */
-  text-decoration: none; /* Removes underline from links */
-  display: inline-block; /* Allows for margin on the bottom */
+  color: #007bff;
+  text-decoration: none;
+  display: inline-block;
   margin-bottom: 10px;
   font-weight: 500;
-  transition: color 0.3s ease; /* Smooth transition for color */
+  transition: color 0.3s ease;
 }
 
 .contact-section a:hover {
-  color: #0056b3; /* Darker shade on hover */
+  color: #0056b3;
 }
 
-/* CSS for Sticky Navbar */
-.navbar {
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adds a shadow for depth */
-  background: #343a40; /* Dark background for navbar */
-  color: #fff; /* Light text color for contrast */
+.contact-section i {
+  margin-right: 10px;
+  color: #007bff;
 }
 
-
-/* Ensure padding is added to body to avoid content being hidden behind the navbar */
-body { 
-  padding-top: 56px; /* Adjust this value based on the height of your navbar */
+/* --- Form Styles (Optional if you're using a contact form) --- */
+.contact-form-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
 
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
+.contact-form-wrapper form {
+  max-width: 600px;
+  width: 100%;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Style for navigation bar links */
-.navbar-nav .nav-link {
-  color: white;
+.contact-form-wrapper form:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-.navbar-nav .nav-link:hover {
-  color: #f8f9fa; /* Slightly lighter white when hovering over links */
+.form-group {
+  margin-bottom: 20px;
 }
 
-/* Media query for responsive navbar collapsing */
-@media (max-width: 992px) {
-  .navbar-collapse {
-    background-color: #343a40; /* Same as navbar color for seamless look */
-  }
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #495057;
 }
 
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
 
-/* Sticky Navigation Bar Styles */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #0056b3;
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+button.btn-primary {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #0056b3;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.btn-primary:hover {
+  background-color: #003d7a;
+  transform: scale(1.02);
+}
+
+button.btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* --- Sticky Navigation Bar --- */
 .navbar {
   background: linear-gradient(135deg, #343a40 0%, #6c757d 100%);
   padding: 10px 20px;
@@ -401,6 +447,7 @@ html {
   margin-left: auto;
 }
 
+/* --- Media Queries for Responsive Navbar --- */
 @media (max-width: 991px) {
   .navbar-nav {
     text-align: center;
@@ -408,7 +455,7 @@ html {
     background: linear-gradient(135deg, #343a40 0%, #6c757d 100%);
     padding-top: 10px;
   }
-  
+
   .navbar-nav .nav-item {
     margin: 10px 0;
   }
@@ -418,11 +465,21 @@ html {
   .navbar-nav {
     display: flex;
   }
-  
+
   .navbar-nav .nav-item {
     margin: 0;
   }
 }
+
+/* --- Global Scroll Behavior --- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding-top: 56px;
+}
+
 
 
 /* Contact Section */
