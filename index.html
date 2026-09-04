@@ -31,16 +31,21 @@
   section { padding:72px 0; }
   section h2 { font-weight:700; letter-spacing:-.6px; margin-bottom:24px; }
   .about-section, .projects-section { background:#fff; }
-  .skills-section { background:var(--soft); }
-  .skill-card, .project-card { border:1px solid #e2e7ee; border-radius:14px; background:#fff; box-shadow:0 10px 30px rgba(23,32,51,.05); }
-  .skill-card { height:100%; transition:transform .2s ease, box-shadow .2s ease; }
-  .skill-card:hover, .project-card:hover { transform:translateY(-3px); box-shadow:0 14px 34px rgba(23,32,51,.09); }
-  .skill-icon { width:44px; height:44px; display:inline-flex; align-items:center; justify-content:center; border-radius:10px; background:#eaf3ff; color:var(--accent); font-weight:700; margin-bottom:16px; }
+  .skills-section, .value-section { background:var(--soft); }
+  .skill-card, .value-card, .project-card { border:1px solid #e2e7ee; border-radius:14px; background:#fff; box-shadow:0 10px 30px rgba(23,32,51,.05); }
+  .skill-card, .value-card { height:100%; transition:transform .2s ease, box-shadow .2s ease; }
+  .skill-card:hover, .value-card:hover, .project-card:hover { transform:translateY(-3px); box-shadow:0 14px 34px rgba(23,32,51,.09); }
+  .skill-icon, .value-icon { width:44px; height:44px; display:inline-flex; align-items:center; justify-content:center; border-radius:10px; background:#eaf3ff; color:var(--accent); font-weight:700; margin-bottom:16px; }
+  .value-card { padding:24px; }
+  .value-card h3 { font-size:1.1rem; font-weight:700; }
   .project-card { overflow:hidden; }
   .project-accent { height:6px; background:var(--accent); }
   .project-metric { border:1px solid #e5eaf1; border-radius:10px; padding:13px; background:#fbfcfe; height:100%; }
   .project-metric strong { display:block; font-size:1.1rem; }
   .project-metric span { color:var(--muted); font-size:.82rem; }
+  .case-step { height:100%; border-left:3px solid var(--accent); padding:4px 0 4px 16px; }
+  .case-step strong { display:block; margin-bottom:5px; }
+  .case-step span { color:var(--muted); font-size:.95rem; line-height:1.6; }
   .contact-section { background:var(--soft); }
   .btn { border-radius:8px; }
   @media (max-width:767px) {
@@ -74,8 +79,8 @@
     <p class="hero-subtitle mx-auto mb-0">I build data-driven solutions, machine learning applications, and practical analytics workflows that turn business problems into measurable insights.</p>
     <div class="mt-4">
       <a class="btn btn-primary btn-lg mr-2 mb-2" href="#projects">View Projects</a>
-      <a class="btn btn-outline-primary btn-lg mr-2 mb-2" href="https://github.com/kattubadimohammad" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a class="btn btn-outline-secondary btn-lg mb-2" href="https://www.linkedin.com/in/kattubadi-mohammad/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a class="btn btn-outline-primary btn-lg mr-2 mb-2" href="https://github.com/kattubadimohammad" target="_blank" rel="noopener noreferrer" aria-label="Visit Mohammad's GitHub profile">GitHub</a>
+      <a class="btn btn-outline-secondary btn-lg mb-2" href="https://www.linkedin.com/in/kattubadi-mohammad/" target="_blank" rel="noopener noreferrer" aria-label="Visit Mohammad's LinkedIn profile">LinkedIn</a>
     </div>
 
     <div class="row quick-stats justify-content-center">
@@ -97,6 +102,18 @@
         <p>I am a data-focused professional with interests across Data Science, Data Analytics, Machine Learning and E-commerce Operations. I enjoy working with data, building analytical solutions, and translating results into clear business outcomes.</p>
         <p class="mb-0">My portfolio highlights hands-on work across data preprocessing, exploratory analysis, predictive modeling, evaluation and deployment, with an emphasis on practical and business-oriented solutions.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="value-section" aria-labelledby="value-heading">
+  <div class="container">
+    <p class="text-primary font-weight-bold mb-2">WHAT I BRING</p>
+    <h2 id="value-heading">From Data to Decisions</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4"><div class="value-card"><div class="value-icon">01</div><h3>Analytical Thinking</h3><p class="mb-0 text-muted">Break down business questions, explore data carefully, and identify patterns that support better decisions.</p></div></div>
+      <div class="col-md-4 mb-4"><div class="value-card"><div class="value-icon">02</div><h3>Practical ML</h3><p class="mb-0 text-muted">Build, evaluate and deploy machine learning workflows with attention to class imbalance and meaningful metrics.</p></div></div>
+      <div class="col-md-4 mb-4"><div class="value-card"><div class="value-icon">03</div><h3>Business Focus</h3><p class="mb-0 text-muted">Translate technical work into clear outcomes that are easier for business and non-technical audiences to understand.</p></div></div>
     </div>
   </div>
 </section>
@@ -126,15 +143,23 @@
             <span class="badge badge-primary mb-3">Machine Learning • Deployed</span>
             <h3 class="font-weight-bold">Credit Card Fraud Detection</h3>
             <p class="lead" style="font-size:1.05rem;">An end-to-end fraud detection application using a Random Forest classifier. The workflow uses stratified splitting and SMOTE on the training data to address class imbalance, followed by evaluation with precision, recall, F1-score, ROC-AUC and PR-AUC.</p>
+
             <div class="row mt-4 mb-4">
               <div class="col-6 col-md-3 mb-3"><div class="project-metric"><strong>0.9704</strong><span>ROC-AUC</span></div></div>
               <div class="col-6 col-md-3 mb-3"><div class="project-metric"><strong>0.8812</strong><span>PR-AUC</span></div></div>
               <div class="col-6 col-md-3 mb-3"><div class="project-metric"><strong>0.8454</strong><span>Fraud F1-score</span></div></div>
               <div class="col-6 col-md-3 mb-3"><div class="project-metric"><strong>99.95%</strong><span>Accuracy</span></div></div>
             </div>
+
+            <div class="row mb-4">
+              <div class="col-md-4 mb-3"><div class="case-step"><strong>Problem</strong><span>Detect fraudulent transactions in a highly imbalanced classification setting.</span></div></div>
+              <div class="col-md-4 mb-3"><div class="case-step"><strong>Approach</strong><span>Preprocess the data, use stratified splitting, apply SMOTE only to training data, and train a Random Forest model.</span></div></div>
+              <div class="col-md-4 mb-3"><div class="case-step"><strong>Evaluation</strong><span>Measure performance with fraud-class precision, recall, F1-score, ROC-AUC and PR-AUC.</span></div></div>
+            </div>
+
             <p class="mb-4"><strong>Tech:</strong> Python • Pandas • Scikit-learn • Imbalanced-learn • Streamlit</p>
-            <a class="btn btn-primary mr-2 mb-2" href="https://credit-card-fraud-detection-0bm5.onrender.com/" target="_blank" rel="noopener noreferrer">Live Demo</a>
-            <a class="btn btn-outline-primary mb-2" href="https://github.com/kattubadimohammad/credit-card-fraud-detection" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a class="btn btn-primary mr-2 mb-2" href="https://credit-card-fraud-detection-0bm5.onrender.com/" target="_blank" rel="noopener noreferrer" aria-label="Open the live Credit Card Fraud Detection demo">Live Demo</a>
+            <a class="btn btn-outline-primary mb-2" href="https://github.com/kattubadimohammad/credit-card-fraud-detection" target="_blank" rel="noopener noreferrer" aria-label="Open the Credit Card Fraud Detection GitHub repository">GitHub Repository</a>
           </div>
         </article>
       </div>
@@ -147,8 +172,8 @@
     <p class="text-primary font-weight-bold mb-2">GET IN TOUCH</p>
     <h2>Let's Connect</h2>
     <p class="lead mx-auto" style="max-width:760px;font-size:1.05rem;">Interested in data, analytics, machine learning or e-commerce opportunities? I'd be happy to connect.</p>
-    <a class="btn btn-primary btn-lg mr-2 mb-2" href="https://www.linkedin.com/in/kattubadi-mohammad/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    <a class="btn btn-outline-primary btn-lg mb-2" href="mailto:kattubadimohammad552@gmail.com">Email Me</a>
+    <a class="btn btn-primary btn-lg mr-2 mb-2" href="https://www.linkedin.com/in/kattubadi-mohammad/" target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn">LinkedIn</a>
+    <a class="btn btn-outline-primary btn-lg mb-2" href="mailto:kattubadimohammad552@gmail.com" aria-label="Send an email to Mohammad">Email Me</a>
   </div>
 </section>
 </main>
