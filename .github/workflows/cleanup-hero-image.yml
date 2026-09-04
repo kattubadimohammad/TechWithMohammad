@@ -1,0 +1,34 @@
+name: Cleanup hero image
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replace embedded image with repository path
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          p = Path("index.html")
+          s = p.read_text(encoding="utf-8")
+          s, n = re.subn(r'src="data:image/jpeg;base64,[^"]*"', 'src="images/about/MK_Photo.png"', s, count=1)
+          if n != 1:
+              raise SystemExit(f"Expected exactly 1 embedded hero image, found {n}")
+          p.write_text(s, encoding="utf-8")
+          PY
+      - name: Commit cleanup
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Use repository photo in index"
+          git push
