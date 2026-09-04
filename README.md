@@ -1,69 +1,90 @@
 # TechWithMohammad
 
-Welcome to **TechWithMohammad** — a comprehensive online portfolio showcasing my journey in **Data Science** and **E-commerce Operations**. This repository contains the code for my interactive portfolio website.
+> **Personal portfolio of Kattubadi Mohammad — Data Science, Data Analytics & E-commerce Operations.**
+
+🌐 **Live Portfolio:** https://techwithmohammad.netlify.app/
+
+🔗 **GitHub:** https://github.com/kattubadimohammad
+
+💼 **LinkedIn:** https://www.linkedin.com/in/mohammad-kattubadi-analyst/
+
+## About
+
+TechWithMohammad is my personal portfolio website, built to showcase my professional profile, technical skills, projects, and experience across **Data Science, Data Analytics, Machine Learning, and E-commerce Operations**.
+
+The portfolio is designed to give recruiters and hiring managers a quick view of my work, with links to project repositories and live applications where available.
+
+## Featured Project
+
+### 💳 Credit Card Fraud Detection
+
+An end-to-end machine learning project that detects potentially fraudulent credit-card transactions using a **Random Forest classifier**.
+
+- Handles severe class imbalance using **SMOTE** on the training data.
+- Uses stratified train/test splitting and evaluates precision, recall, F1-score, ROC-AUC and PR-AUC.
+- Includes a Streamlit web application for interactive transaction analysis.
+- Deployed application: https://credit-card-fraud-detection-0bm5.onrender.com/
+- Repository: https://github.com/kattubadimohammad/credit-card-fraud-detection
 
 ## Key Features
 
-- **Responsive Design**: Ensures a seamless experience across all devices.
-- **Project Showcase**: Features links to live demos and GitHub repositories for each project.
-- **Skill Spotlight**: Highlights key technical skills in **Data Science**, **Machine Learning**, and **E-commerce Operations**.
-- **About & Contact**: Provides information about me, my career, and how to get in touch.
+- 📱 Responsive portfolio design
+- 📊 Data Science & Analytics project showcase
+- 🤖 Machine Learning projects with live demos
+- 🛒 E-commerce Operations experience and skills
+- 🔗 GitHub and live-project links
+- 💼 Professional About, Skills and Contact sections
 
 ## Tech Stack
 
-- **HTML5**: Structure and content.
-- **CSS3**: Styling and layout.
-- **JavaScript**: Interactivity and dynamic content.
+- **HTML5** — page structure and semantic content
+- **CSS3** — responsive styling, layout and animations
+- **JavaScript** — interactions and dynamic behaviour
+- **Bootstrap** — responsive UI components
+- **Git & GitHub** — version control and project hosting
+- **Netlify** — portfolio deployment
 
 ## Repository Structure
 
+```text
 TechWithMohammad/
-│
-├── icons/ # Icon files used in the website.
-├── images/ # Image assets and portfolio images.
-├── .gitignore # Files and folders to ignore from version control.
-├── LICENSE # Project License.
-├── README.md # This file.
-├── index.html # Main landing page for the portfolio.
-├── script.js # JavaScript functionality and interactivity.
-└── styles.css # Styling for the website.
+├── icons/       # Website icons
+├── images/      # Portfolio images and assets
+├── .gitignore   # Ignored files
+├── LICENSE      # Project license
+├── README.md    # Project documentation
+├── index.html   # Main portfolio page
+├── script.js    # JavaScript functionality
+└── styles.css   # Website styling
+```
 
+## Run Locally
 
-## Getting Started
+1. Clone the repository:
 
-To view and edit the site locally:
-
-1. **Clone the repository**:
-
+```bash
 git clone https://github.com/kattubadimohammad/TechWithMohammad.git
+```
 
+2. Open the project folder:
 
-2. **Navigate to the project folder**:
-
+```bash
 cd TechWithMohammad
+```
 
+3. Open `index.html` in a browser, or use a local development server such as VS Code Live Server.
 
-3. Open the `index.html` file in your browser to view the site locally.
+## Deployment
 
-## Customization
+The portfolio is currently published on **Netlify**:
 
-- **Personalize Content**: Update the `index.html` file with your personal information, projects, and achievements.
-- **Modify Styles**: Adjust the `styles.css` file to match your preferred design aesthetics and branding.
-- **Update Images**: Add or replace images in the `images/` directory to reflect your portfolio.
+https://techwithmohammad.netlify.app/
 
-## Live Demo
+## Contact
 
-You can check out the live website here: [https://kattubadimohammad.github.io/TechWithMohammad/](https://kattubadimohammad.github.io/TechWithMohammad/)
+- **LinkedIn:** https://www.linkedin.com/in/mohammad-kattubadi-analyst/
+- **Email:** kattubadimohammad552@gmail.com
 
-## Updating the Site
+---
 
-1. Make changes locally.
-2. Commit your changes and push to the main branch.
-3. GitHub Pages will automatically update the website with the latest changes.
-
-## Contact Me
-
-Feel free to reach out or connect with me:
-
-- **LinkedIn**: [Kattubadi Mohammad](https://www.linkedin.com/in/mohammad-kattubadi-analyst/)
-- **Email**: kattubadimohammad552@gmail.com
+⭐ If you find the portfolio useful, feel free to explore the projects and connect with me.
