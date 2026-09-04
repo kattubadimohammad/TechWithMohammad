@@ -6,7 +6,9 @@
 
 🔗 **GitHub:** https://github.com/kattubadimohammad
 
-💼 **LinkedIn:** https://www.linkedin.com/in/mohammad-kattubadi-analyst/
+💼 **LinkedIn:** https://www.linkedin.com/in/kattubadi-mohammad/
+
+📄 **Resume:** https://github.com/kattubadimohammad/TechWithMohammad/blob/main/resume.pdf
 
 ## About
 
@@ -54,6 +56,7 @@ TechWithMohammad/
 ├── LICENSE      # Project license
 ├── README.md    # Project documentation
 ├── index.html   # Main portfolio page
+├── resume.pdf   # Resume
 ├── script.js    # JavaScript functionality
 └── styles.css   # Website styling
 ```
@@ -82,8 +85,8 @@ https://techwithmohammad.netlify.app/
 
 ## Contact
 
-- **LinkedIn:** https://www.linkedin.com/in/mohammad-kattubadi-analyst/
-- **Email:** kattubadimohammad552@gmail.com
+- **LinkedIn:** https://www.linkedin.com/in/kattubadi-mohammad/
+- **Email:** miraclemohammad786@gmail.com
 
 ---
 
