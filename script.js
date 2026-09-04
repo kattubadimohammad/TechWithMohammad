@@ -1,37 +1,39 @@
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('contact-form');
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
 
-    const formData = new FormData(form);
+      const formData = new FormData(form);
 
-    fetch(form.action, {
-      method: form.method,
-      body: formData,
-      headers: {
-        Accept: 'application/json',
-      },
-    })
-      .then((response) => {
-        if (response.ok) {
-          const existingAlert = document.querySelector('.alert');
-          if (existingAlert) existingAlert.remove();
-
-          const successMessage = document.createElement('div');
-          successMessage.className = 'alert alert-success';
-          successMessage.textContent = 'Thank you for contacting us! We will get back to you soon.';
-          form.appendChild(successMessage);
-
-          form.reset();
-        } else {
-          alert('There was a problem with your submission. Please try again.');
-        }
+      fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          Accept: 'application/json',
+        },
       })
-      .catch(() => {
-        alert('There was an error submitting the form. Please try again later.');
-      });
-  });
+        .then((response) => {
+          if (response.ok) {
+            const existingAlert = document.querySelector('.alert');
+            if (existingAlert) existingAlert.remove();
+
+            const successMessage = document.createElement('div');
+            successMessage.className = 'alert alert-success';
+            successMessage.textContent = 'Thank you for contacting us! We will get back to you soon.';
+            form.appendChild(successMessage);
+
+            form.reset();
+          } else {
+            alert('There was a problem with your submission. Please try again.');
+          }
+        })
+        .catch(() => {
+          alert('There was an error submitting the form. Please try again later.');
+        });
+    });
+  }
 
   // Load the portfolio headshot from the repository image file.
   const heroPhoto = document.querySelector('.hero-photo');
