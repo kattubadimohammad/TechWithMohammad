@@ -35,4 +35,10 @@ document.addEventListener('DOMContentLoaded', function () {
         alert('There was an error submitting the form. Please try again later.');
       });
   });
+
+  // Load the portfolio headshot from the repository image file.
+  const heroPhoto = document.querySelector('.hero-photo');
+  if (heroPhoto) {
+    heroPhoto.src = 'images/about/MK_Passphoto.png';
+  }
 });
