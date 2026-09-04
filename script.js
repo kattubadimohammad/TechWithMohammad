@@ -35,17 +35,32 @@ document.addEventListener('DOMContentLoaded', function () {
   const heroPhoto = document.querySelector('.hero-photo');
   if (heroPhoto) heroPhoto.src = 'images/about/MK_Photo.png';
 
-  // Strengthen the professional Flipkart experience description without exposing confidential details.
+  // Refine the professional experience attribution without exposing confidential details.
   const experienceHeading = Array.from(document.querySelectorAll('#experience h3')).find((heading) => heading.textContent.trim() === 'Flipkart');
   if (experienceHeading) {
     const card = experienceHeading.closest('.timeline-card');
     const paragraph = card && card.querySelector('p.mb-0');
     const meta = card && card.querySelector('.timeline-meta');
+    experienceHeading.childNodes.forEach((node) => {
+      if (node.nodeType === Node.TEXT_NODE) node.textContent = '';
+    });
+    const headingText = document.createTextNode('TeamLease Services — Deployed at Flipkart');
+    experienceHeading.appendChild(headingText);
     if (paragraph) {
       paragraph.textContent = 'Experience in an e-commerce operations environment, supporting data-driven workflows, commercial performance analysis, operational processes and marketplace support. This experience connects technical problem-solving with real business operations and analytics.';
     }
     if (meta) {
       meta.textContent = 'Bengaluru, India • Sep 2024 – Sep 2026';
+    }
+  }
+
+  // Add Power BI to the analytics and business intelligence skill card.
+  const analyticsHeading = Array.from(document.querySelectorAll('#skills h3')).find((heading) => heading.textContent.trim() === 'Analytics & BI');
+  if (analyticsHeading) {
+    const analyticsCard = analyticsHeading.closest('.skill-card');
+    const analyticsParagraph = analyticsCard && analyticsCard.querySelector('p');
+    if (analyticsParagraph) {
+      analyticsParagraph.textContent = 'SQL, Power BI, Tableau, Streamlit, KPI-focused reporting, dashboards and data-driven decision support.';
     }
   }
 
