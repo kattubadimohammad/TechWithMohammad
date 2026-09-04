@@ -15,17 +15,14 @@ document.addEventListener('DOMContentLoaded', function () {
     })
       .then((response) => {
         if (response.ok) {
-          // Clear previous alerts
           const existingAlert = document.querySelector('.alert');
           if (existingAlert) existingAlert.remove();
 
-          // Show success message
           const successMessage = document.createElement('div');
           successMessage.className = 'alert alert-success';
           successMessage.textContent = 'Thank you for contacting us! We will get back to you soon.';
           form.appendChild(successMessage);
 
-          // Reset form
           form.reset();
         } else {
           alert('There was a problem with your submission. Please try again.');
@@ -41,4 +38,52 @@ document.addEventListener('DOMContentLoaded', function () {
   if (heroPhoto) {
     heroPhoto.src = 'images/about/MK_Photo.png';
   }
+
+  // Add verified GitHub/live-demo links to major project cards.
+  const projectLinks = {
+    'Credit Card Fraud Detection': [
+      {
+        label: 'GitHub',
+        url: 'https://github.com/kattubadimohammad/credit-card-fraud-detection',
+        className: 'btn btn-outline-primary btn-sm mr-2'
+      },
+      {
+        label: 'Live Demo',
+        url: 'https://credit-card-fraud-detection-0bm5.onrender.com/',
+        className: 'btn btn-primary btn-sm'
+      }
+    ],
+    'AI Resume Classification': [
+      {
+        label: 'GitHub',
+        url: 'https://github.com/kattubadimohammad/Resume-Classification',
+        className: 'btn btn-outline-primary btn-sm'
+      }
+    ]
+  };
+
+  document.querySelectorAll('.project-card, .project-grid-card').forEach((card) => {
+    const heading = card.querySelector('h3');
+    if (!heading) return;
+
+    const title = heading.textContent.trim();
+    const links = projectLinks[title];
+    if (!links || card.querySelector('.project-links')) return;
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'project-links mt-3';
+
+    links.forEach((link) => {
+      const anchor = document.createElement('a');
+      anchor.href = link.url;
+      anchor.target = '_blank';
+      anchor.rel = 'noopener noreferrer';
+      anchor.className = link.className;
+      anchor.textContent = link.label;
+      anchor.setAttribute('aria-label', `${link.label} for ${title}`);
+      wrapper.appendChild(anchor);
+    });
+
+    card.appendChild(wrapper);
+  });
 });
