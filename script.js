@@ -39,25 +39,46 @@ document.addEventListener('DOMContentLoaded', function () {
     heroPhoto.src = 'images/about/MK_Photo.png';
   }
 
-  // Add verified GitHub/live-demo links to major project cards.
+  // Add verified GitHub/live-demo links to project cards.
   const projectLinks = {
     'Credit Card Fraud Detection': [
       {
-        label: 'GitHub',
+        label: 'GitHub Repository',
         url: 'https://github.com/kattubadimohammad/credit-card-fraud-detection',
-        className: 'btn btn-outline-primary btn-sm mr-2'
+        className: 'btn btn-outline-primary btn-sm mr-2 mb-2'
       },
       {
         label: 'Live Demo',
         url: 'https://credit-card-fraud-detection-0bm5.onrender.com/',
-        className: 'btn btn-primary btn-sm'
+        className: 'btn btn-primary btn-sm mb-2'
+      }
+    ],
+    'Resume Classification': [
+      {
+        label: 'GitHub Repository',
+        url: 'https://github.com/kattubadimohammad/Resume-Classification',
+        className: 'btn btn-outline-primary btn-sm mr-2 mb-2'
       }
     ],
     'AI Resume Classification': [
       {
-        label: 'GitHub',
+        label: 'GitHub Repository',
         url: 'https://github.com/kattubadimohammad/Resume-Classification',
-        className: 'btn btn-outline-primary btn-sm'
+        className: 'btn btn-outline-primary btn-sm mr-2 mb-2'
+      }
+    ],
+    'Book Recommendation System': [
+      {
+        label: 'GitHub Repository',
+        url: 'https://github.com/kattubadimohammad/Book-Recommendation-System',
+        className: 'btn btn-outline-primary btn-sm mr-2 mb-2'
+      }
+    ],
+    'Two-Wheeler Website Design': [
+      {
+        label: 'GitHub Repository',
+        url: 'https://github.com/kattubadimohammad/Two-Wheeler-Web-Design',
+        className: 'btn btn-outline-primary btn-sm mr-2 mb-2'
       }
     ]
   };
