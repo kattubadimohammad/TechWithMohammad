@@ -35,41 +35,30 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Load the portfolio headshot from the repository image file.
   const heroPhoto = document.querySelector('.hero-photo');
   if (heroPhoto) {
     heroPhoto.src = 'images/about/MK_Photo.png';
   }
 
-  // Highlight a professional project without exposing company code or data.
+  // Add the confidential professional Flipkart project as the featured project.
   const projectsSection = document.querySelector('#projects .row');
-  if (projectsSection && !document.querySelector('[data-professional-project="ecommerce"]')) {
-    const professionalProject = document.createElement('div');
-    professionalProject.className = 'col-12 mb-4';
-    professionalProject.setAttribute('data-professional-project', 'ecommerce');
-    professionalProject.innerHTML = `
+  if (projectsSection && !document.querySelector('[data-project="flipkart-commercial"]')) {
+    const featured = document.createElement('div');
+    featured.className = 'col-12 mb-4';
+    featured.setAttribute('data-project', 'flipkart-commercial');
+    featured.innerHTML = `
       <article class="project-card">
         <div class="project-accent"></div>
         <div class="p-4 p-md-5">
-          <span class="badge badge-primary mb-3">Professional Project • Internal Company Application</span>
+          <span class="badge badge-primary mb-3">Professional Project • Flipkart — Internal Business Application</span>
           <h3 class="font-weight-bold">E-Commerce Commercial Performance &amp; Sales Control Center</h3>
-          <p class="lead" style="font-size:1.05rem;">Built a multi-page Streamlit application delivering commercial intelligence on GMV, MRP Sales, G2N dilution leakage and Blended AOV.</p>
-          <div class="row mt-4">
-            <div class="col-md-4 mb-3">
-              <div class="case-step"><strong>Data Engineering</strong><span>Pandas ETL pipelines to ingest, sanitize and aggregate FY25/FY26 transactional data with multi-dimensional YoY analysis.</span></div>
-            </div>
-            <div class="col-md-4 mb-3">
-              <div class="case-step"><strong>Commercial Analytics</strong><span>Analyzed core e-commerce KPIs including GMV, MRP Sales, G2N dilution leakage and Blended AOV.</span></div>
-            </div>
-            <div class="col-md-4 mb-3">
-              <div class="case-step"><strong>Reporting Automation</strong><span>Engineered an OpenPyXL reporting engine with multi-level headers, programmatic formatting and dynamic column sizing.</span></div>
-            </div>
-          </div>
-          <p class="project-tags mt-3 mb-0">Python • Streamlit • Pandas • NumPy • OpenPyXL</p>
-          <p class="text-muted small mt-3 mb-0"><strong>Portfolio note:</strong> Internal professional work — company code and data are not publicly shared.</p>
+          <p class="lead" style="font-size:1.05rem;">Built a multi-page commercial intelligence application for analyzing GMV, MRP Sales, G2N dilution leakage and Blended AOV, with FY25/FY26 YoY analysis and automated Excel reporting.</p>
+          <p class="text-muted mb-3"><strong>Technology:</strong> Python • Streamlit • Pandas • NumPy • OpenPyXL</p>
+          <p class="text-muted">Developed for internal business use. Company source code, raw transactional data and confidential business information are not publicly disclosed.</p>
+          <a class="btn btn-primary mr-2 mb-2" href="ecommerce-case-study.html" aria-label="View Flipkart e-commerce project case study">View Case Study</a>
         </div>
       </article>`;
-    projectsSection.insertBefore(professionalProject, projectsSection.firstElementChild);
+    projectsSection.insertBefore(featured, projectsSection.firstElementChild);
   }
 
   // Add verified GitHub/live-demo links to public project cards.
