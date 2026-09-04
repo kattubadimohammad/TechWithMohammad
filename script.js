@@ -40,8 +40,12 @@ document.addEventListener('DOMContentLoaded', function () {
   if (experienceHeading) {
     const card = experienceHeading.closest('.timeline-card');
     const paragraph = card && card.querySelector('p.mb-0');
+    const meta = card && card.querySelector('.timeline-meta');
     if (paragraph) {
       paragraph.textContent = 'Experience in an e-commerce operations environment, supporting data-driven workflows, commercial performance analysis, operational processes and marketplace support. This experience connects technical problem-solving with real business operations and analytics.';
+    }
+    if (meta) {
+      meta.textContent = 'Bengaluru, India • Sep 2024 – Sep 2026';
     }
   }
 
@@ -59,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
           <h3 class="font-weight-bold">E-Commerce Commercial Performance &amp; Sales Control Center</h3>
           <p class="lead" style="font-size:1.05rem;">Built a multi-page commercial intelligence application to analyze GMV, MRP Sales, G2N dilution and Blended AOV, with FY25/FY26 YoY analysis and automated Excel reporting. Developed the data-processing and reporting workflows using Python, Pandas, NumPy, Streamlit and OpenPyXL.</p>
           <p class="text-muted mb-3"><strong>Technology:</strong> Python • Streamlit • Pandas • NumPy • OpenPyXL</p>
-          <p class="text-muted">Developed for internal business use. Company source code, raw transactional data and confidential business information are not publicly disclosed.</p>
+          <p class="text-muted"><strong>Confidentiality:</strong> Developed for internal business use. Company source code, raw transactional data and confidential business information are not publicly disclosed.</p>
           <a class="btn btn-primary mr-2 mb-2" href="case-study-ecommerce.html" aria-label="View Flipkart e-commerce project case study">View Case Study</a>
         </div>
       </article>`;
