@@ -1,43 +1,166 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Kattubadi Mohammad — Data Science, Data Analytics, Machine Learning and E-commerce Operations portfolio.">
-<meta name="author" content="Kattubadi Mohammad">
-<meta name="theme-color" content="#0d6efd">
-<meta property="og:title" content="Kattubadi Mohammad | Data Science & Analytics Portfolio">
-<meta property="og:description" content="Explore projects, experience, skills and certifications in Data Science, Data Analytics, Machine Learning and E-commerce Operations.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://techwithmohammad.netlify.app/">
-<title>Kattubadi Mohammad | Data Science & Analytics Portfolio</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="styles.css">
-<style>
-:root{--accent:#0d6efd;--ink:#172033;--muted:#5f6b7a;--soft:#f5f8fc;--line:#e2e7ee}
-html{scroll-behavior:smooth}body{color:var(--ink);background:#fff}.navbar{min-height:72px}.navbar-brand{letter-spacing:-.3px}.hero-section{background:linear-gradient(180deg,#f7fbff 0%,#fff 100%)}.hero-content{padding:70px 0 60px}.eyebrow{letter-spacing:.8px;font-size:.9rem}.availability-pill{display:inline-flex;align-items:center;gap:8px;padding:7px 13px;border-radius:999px;background:#eef7f1;color:#267342;font-size:.82rem;font-weight:700;margin-bottom:18px}.availability-dot{width:8px;height:8px;border-radius:50%;background:#35a85b}.hero-title{font-size:clamp(2.7rem,6vw,4.7rem);line-height:1.05;letter-spacing:-2px}.hero-subtitle{color:var(--muted);max-width:820px;font-size:1.18rem;line-height:1.7}.hero-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(280px,.7fr);gap:48px;align-items:center;text-align:left}.hero-copy .hero-subtitle{margin-left:0}.hero-photo-wrap{display:flex;justify-content:center}.hero-photo{width:min(330px,100%);aspect-ratio:4/5;object-fit:cover;object-position:center top;border-radius:24px;box-shadow:0 20px 50px rgba(23,32,51,.16);border:8px solid #fff}.hero-actions{margin-top:26px}.quick-stats{margin-top:38px}.stat-card{height:100%;padding:20px 14px;border:1px solid #e4e9f0;border-radius:12px;background:#fff;box-shadow:0 8px 24px rgba(23,32,51,.05)}.stat-number{font-size:1.45rem;font-weight:700;color:var(--accent)}.stat-label{color:var(--muted);font-size:.9rem;margin-top:4px}section{padding:72px 0}section h2{font-weight:700;letter-spacing:-.6px;margin-bottom:24px}.about-section,.projects-section,.experience-section,.education-section{background:#fff}.skills-section,.value-section,.cert-section{background:var(--soft)}.skill-card,.value-card,.project-card,.timeline-card,.cert-card{border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:0 10px 30px rgba(23,32,51,.05)}.skill-card,.value-card,.cert-card{height:100%;transition:transform .2s ease,box-shadow .2s ease}.skill-card:hover,.value-card:hover,.cert-card:hover,.project-card:hover,.timeline-card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(23,32,51,.09)}.skill-icon,.value-icon{width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;border-radius:10px;background:#eaf3ff;color:var(--accent);font-weight:700;margin-bottom:16px}.value-card{padding:24px}.value-card h3{font-size:1.1rem;font-weight:700}.project-card{overflow:hidden}.project-accent{height:6px;background:var(--accent)}.project-metric{border:1px solid #e5eaf1;border-radius:10px;padding:13px;background:#fbfcfe;height:100%}.project-metric strong{display:block;font-size:1.1rem}.project-metric span{color:var(--muted);font-size:.82rem}.case-step{height:100%;border-left:3px solid var(--accent);padding:4px 0 4px 16px}.case-step strong{display:block;margin-bottom:5px}.case-step span{color:var(--muted);font-size:.95rem;line-height:1.6}.project-grid-card{height:100%;padding:26px;border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:0 10px 30px rgba(23,32,51,.05);transition:transform .2s ease,box-shadow .2s ease}.project-grid-card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(23,32,51,.09)}.project-grid-card h3{font-size:1.15rem;font-weight:700}.project-tags{font-size:.86rem;color:var(--accent);font-weight:600}.timeline-card{padding:26px}.timeline-dot{width:12px;height:12px;border-radius:50%;background:var(--accent);display:inline-block;margin-right:8px}.timeline-meta{color:var(--muted);font-size:.9rem}.cert-card{padding:22px}.cert-card h3{font-size:1.05rem;font-weight:700}.cert-card p{color:var(--muted);margin-bottom:0}.contact-section{background:var(--soft)}.btn{border-radius:8px}a:focus,button:focus{outline:3px solid rgba(13,110,253,.35);outline-offset:3px}.skip-link{position:absolute;left:12px;top:-60px;z-index:2000;padding:10px 14px;background:#172033;color:#fff;border-radius:6px}.skip-link:focus{top:12px;color:#fff}.section-note{max-width:760px;color:var(--muted);line-height:1.7}.footer-link{color:var(--muted);margin:0 8px}.footer-link:hover{color:var(--accent);text-decoration:none}@media(max-width:767px){.hero-content{padding:54px 0 50px}.hero-title{letter-spacing:-1px}.hero-grid{grid-template-columns:1fr;gap:30px;text-align:center}.hero-copy .hero-subtitle{margin-left:auto}.hero-photo{width:min(260px,75vw);border-radius:20px}.hero-actions .btn{margin-right:4px!important}section{padding:54px 0}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Mohammad Kattubadi — sourcing transformation, business operations, data analytics, Python, SQL, Power BI and machine learning.">
+  <meta name="author" content="Mohammad Kattubadi">
+  <meta name="theme-color" content="#101b35">
+  <meta property="og:title" content="Mohammad Kattubadi | Sourcing & Data Analytics">
+  <meta property="og:description" content="Sourcing transformation, business operations, analytics and applied AI projects.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://techwithmohammad.netlify.app/">
+  <title>Mohammad Kattubadi | Sourcing & Data Analytics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
-<header class="hero-section" id="home">
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top" aria-label="Primary navigation">
-<div class="container"><a class="navbar-brand font-weight-bold" href="#home" aria-label="TechWithMohammad home">TechWithMohammad</a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#portfolioNav" aria-controls="portfolioNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-<div class="collapse navbar-collapse" id="portfolioNav"><ul class="navbar-nav ml-auto">
-<li class="nav-item"><a class="nav-link" href="#home">Home</a></li><li class="nav-item"><a class="nav-link" href="#about">About</a></li><li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li><li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li><li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li><li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li><li class="nav-item"><a class="nav-link" href="#education">Education</a></li><li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-</ul></div></div></nav>
-<div class="container hero-content"><div class="hero-grid"><div class="hero-copy"><div class="availability-pill"><span class="availability-dot" aria-hidden="true"></span>Data-driven solutions • Practical impact</div><p class="eyebrow text-primary font-weight-bold mb-3">DATA SCIENCE • DATA ANALYTICS • MACHINE LEARNING</p><h1 class="hero-title font-weight-bold mb-4">Kattubadi Mohammad</h1><p class="h4 font-weight-normal mb-3">Data Science &amp; Analytics Professional</p><p class="hero-subtitle mb-0">I build data-driven solutions, machine learning applications, and practical analytics workflows that turn business problems into measurable insights.</p><div class="hero-actions"><a class="btn btn-primary btn-lg mr-2 mb-2" href="#projects">View Projects</a><a class="btn btn-outline-primary btn-lg mr-2 mb-2" href="https://github.com/kattubadimohammad" target="_blank" rel="noopener noreferrer" aria-label="Visit Mohammad's GitHub profile">GitHub</a><a class="btn btn-outline-secondary btn-lg mr-2 mb-2" href="https://www.linkedin.com/in/kattubadi-mohammad/" target="_blank" rel="noopener noreferrer" aria-label="Visit Mohammad's LinkedIn profile">LinkedIn</a><a class="btn btn-dark btn-lg mb-2" href="resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open Mohammad's resume PDF">Download Resume</a></div></div><div class="hero-photo-wrap"><img class="hero-photo" src="images/about/MK_Photo.png" alt="Professional headshot of Kattubadi Mohammad"></div></div><div class="row quick-stats justify-content-center"><div class="col-6 col-md-3 mb-3"><div class="stat-card"><div class="stat-number">Python</div><div class="stat-label">Core language</div></div></div><div class="col-6 col-md-3 mb-3"><div class="stat-card"><div class="stat-number">ML</div><div class="stat-label">Model development</div></div></div><div class="col-6 col-md-3 mb-3"><div class="stat-card"><div class="stat-number">Analytics</div><div class="stat-label">Business insights</div></div></div><div class="col-6 col-md-3 mb-3"><div class="stat-card"><div class="stat-number">Deployed</div><div class="stat-label">Live ML application</div></div></div></div></div></header>
-<main id="main-content">
-<section id="about" class="about-section"><div class="container"><p class="text-primary font-weight-bold mb-2">PROFILE</p><h2>About Me</h2><p class="section-note">I am a data-focused professional with interests across Data Science, Data Analytics, Machine Learning and E-commerce Operations. I enjoy working with data, building analytical solutions, and translating results into clear business outcomes.</p><p class="section-note mb-0">My portfolio highlights hands-on work across data preprocessing, exploratory analysis, predictive modeling, evaluation, dashboards and deployment, with an emphasis on practical and business-oriented solutions.</p></div></section>
-<section id="experience" class="experience-section"><div class="container"><p class="text-primary font-weight-bold mb-2">PROFESSIONAL JOURNEY</p><h2>Experience</h2><div class="row"><div class="col-lg-8 mb-4"><article class="timeline-card"><h3 class="h4 font-weight-bold"><span class="timeline-dot" aria-hidden="true"></span>Flipkart</h3><p class="timeline-meta mb-3">Bengaluru, India • Professional Experience</p><p class="mb-0">Experience in an e-commerce environment, with exposure to operational workflows, data-driven processes and marketplace support. This experience complements my analytics background by connecting technical problem-solving with real business operations.</p></article></div><div class="col-lg-4 mb-4"><article class="timeline-card h-100"><h3 class="h5 font-weight-bold">Data Science Intern</h3><p class="timeline-meta mb-3">ExcelR Community / Data Science Community • Jun 2023 – Oct 2023</p><p class="mb-0">Supported fellow learners with Python programming, data analysis exercises and machine learning project implementation while helping troubleshoot code and data-preprocessing challenges.</p></article></div></div></div></section>
-<section class="value-section" aria-labelledby="value-heading"><div class="container"><p class="text-primary font-weight-bold mb-2">WHAT I BRING</p><h2 id="value-heading">From Data to Decisions</h2><div class="row"><div class="col-md-4 mb-4"><div class="value-card"><div class="value-icon">01</div><h3>Analytical Thinking</h3><p class="mb-0 text-muted">Break down business questions, explore data carefully, and identify patterns that support better decisions.</p></div></div><div class="col-md-4 mb-4"><div class="value-card"><div class="value-icon">02</div><h3>Practical ML</h3><p class="mb-0 text-muted">Build, evaluate and deploy machine learning workflows with attention to class imbalance and meaningful metrics.</p></div></div><div class="col-md-4 mb-4"><div class="value-card"><div class="value-icon">03</div><h3>Business Focus</h3><p class="mb-0 text-muted">Translate technical work into clear outcomes that are easier for business and non-technical audiences to understand.</p></div></div></div></div></section>
-<section id="skills" class="skills-section"><div class="container"><p class="text-primary font-weight-bold mb-2">CAPABILITIES</p><h2>Skills &amp; Focus Areas</h2><div class="row"><div class="col-md-6 col-lg-3 mb-4"><div class="skill-card p-4"><div class="skill-icon">DS</div><h3 class="h5 font-weight-bold">Data Science</h3><p class="mb-0 text-muted">Python, Pandas, NumPy, data cleaning, EDA and statistical analysis.</p></div></div><div class="col-md-6 col-lg-3 mb-4"><div class="skill-card p-4"><div class="skill-icon">ML</div><h3 class="h5 font-weight-bold">Machine Learning</h3><p class="mb-0 text-muted">Scikit-learn, classification, model evaluation, imbalance handling and deployment.</p></div></div><div class="col-md-6 col-lg-3 mb-4"><div class="skill-card p-4"><div class="skill-icon">SQL</div><h3 class="h5 font-weight-bold">Analytics &amp; BI</h3><p class="mb-0 text-muted">SQL, Tableau, Streamlit, KPI-focused reporting, dashboards and data-driven decision support.</p></div></div><div class="col-md-6 col-lg-3 mb-4"><div class="skill-card p-4"><div class="skill-icon">EC</div><h3 class="h5 font-weight-bold">E-commerce Operations</h3><p class="mb-0 text-muted">Operational workflows, quality checks, process improvement and marketplace support.</p></div></div></div></div></section>
-<section id="projects" class="projects-section"><div class="container"><p class="text-primary font-weight-bold mb-2">SELECTED WORK</p><h2>Projects</h2><div class="row"><div class="col-12 mb-4"><article class="project-card"><div class="project-accent"></div><div class="p-4 p-md-5"><span class="badge badge-primary mb-3">Machine Learning • Deployed</span><h3 class="font-weight-bold">Credit Card Fraud Detection</h3><p class="lead" style="font-size:1.05rem;">An end-to-end fraud detection application using a Random Forest classifier. The workflow uses stratified splitting and SMOTE on the training data to address class imbalance, followed by evaluation with precision, recall, F1-score, ROC-AUC and PR-AUC.</p><div class="row mt-4 mb-4"><div class="col-6 col-md-3 mb-3"><div class="project-metric"><strong>0.9704</strong><span>ROC-AUC</span></div></div><div class="col-6 col-md-3 mb-3"><div class="project-metric"><strong>0.8812</strong><span>PR-AUC</span></div></div><div class="col-6 col-md-3 mb-3"><div class="project-metric"><strong>0.8454</strong><span>Fraud F1-score</span></div></div><div class="col-6 col-md-3 mb-3"><div class="project-metric"><strong>99.95%</strong><span>Accuracy</span></div></div></div><div class="row mb-4"><div class="col-md-4 mb-3"><div class="case-step"><strong>Problem</strong><span>Detect fraudulent transactions in a highly imbalanced classification setting.</span></div></div><div class="col-md-4 mb-3"><div class="case-step"><strong>Approach</strong><span>Preprocess the data, use stratified splitting, apply SMOTE only to training data, and train a Random Forest model.</span></div></div><div class="col-md-4 mb-3"><div class="case-step"><strong>Evaluation</strong><span>Measure performance with fraud-class precision, recall, F1-score, ROC-AUC and PR-AUC.</span></div></div></div><p class="mb-4"><strong>Tech:</strong> Python • Pandas • Scikit-learn • Imbalanced-learn • Streamlit</p><a class="btn btn-primary mr-2 mb-2" href="https://credit-card-fraud-detection-0bm5.onrender.com/" target="_blank" rel="noopener noreferrer" aria-label="Open the live Credit Card Fraud Detection demo">Live Demo</a><a class="btn btn-outline-primary mb-2" href="https://github.com/kattubadimohammad/credit-card-fraud-detection" target="_blank" rel="noopener noreferrer" aria-label="Open the Credit Card Fraud Detection GitHub repository">GitHub Repository</a></div></article></div><div class="col-md-6 col-lg-4 mb-4"><article class="project-grid-card"><span class="badge badge-light mb-3">Recommendation • Machine Learning</span><h3>Book Recommendation System</h3><p class="text-muted">Built a KNN-based recommendation system using more than 10,000 user-item interactions to personalize book suggestions.</p><p class="project-tags mb-0">Python • KNN • Recommendation</p></article></div><div class="col-md-6 col-lg-4 mb-4"><article class="project-grid-card"><span class="badge badge-light mb-3">NLP • Classification</span><h3>Resume Classification</h3><p class="text-muted">Developed an NLP-based resume classification workflow using SVM, XGBoost and Naive Bayes, with text preprocessing techniques.</p><p class="project-tags mb-0">Python • NLP • ML</p></article></div><div class="col-md-6 col-lg-4 mb-4"><article class="project-grid-card"><span class="badge badge-light mb-3">Web • Front-end</span><h3>Two-Wheeler Website Design</h3><p class="text-muted">Designed a user-friendly two-wheeler website with product browsing, availability information and customer support contact flows.</p><p class="project-tags mb-0">HTML • CSS • JavaScript</p></article></div></div></div></section>
-<section id="certifications" class="cert-section"><div class="container"><p class="text-primary font-weight-bold mb-2">CREDENTIALS</p><h2>Certifications</h2><div class="row"><div class="col-md-6 col-lg-4 mb-4"><div class="cert-card"><h3>Python 101 for Data Science</h3><p>Cognitive Class • Jul 2025</p></div></div><div class="col-md-6 col-lg-4 mb-4"><div class="cert-card"><h3>HackerRank Software Engineer Certification</h3><p>HackerRank • Apr 2025</p></div></div><div class="col-md-6 col-lg-4 mb-4"><div class="cert-card"><h3>Career Essentials in Generative AI</h3><p>Microsoft &amp; LinkedIn • Aug 2024</p></div></div><div class="col-md-6 col-lg-4 mb-4"><div class="cert-card"><h3>Python (Basic)</h3><p>HackerRank • Aug 2024</p></div></div><div class="col-md-6 col-lg-4 mb-4"><div class="cert-card"><h3>What Is Generative AI?</h3><p>LinkedIn • May 2024</p></div></div><div class="col-md-6 col-lg-4 mb-4"><div class="cert-card"><h3>Data Science</h3><p>ExcelR • Jun 2023</p></div></div></div></div></section>
-<section id="education" class="education-section"><div class="container"><p class="text-primary font-weight-bold mb-2">EDUCATION</p><h2>Education</h2><div class="row"><div class="col-lg-8"><article class="timeline-card"><h3 class="h4 font-weight-bold">B.Tech — Computer Science</h3><p class="timeline-meta mb-3">Sree Vahini Institute of Science &amp; Technology • 2019 – 2023</p><p class="mb-0">Completed B.Tech in Computer Science under JNTU Kakinada, with hands-on exposure to programming, algorithms, AI/ML, business intelligence, data analysis and data visualization.</p></article></div></div></div></section>
-<section id="contact" class="contact-section"><div class="container text-center"><p class="text-primary font-weight-bold mb-2">GET IN TOUCH</p><h2>Let's Connect</h2><p class="lead mx-auto" style="max-width:760px;font-size:1.05rem;">Interested in data, analytics, machine learning or e-commerce opportunities? I'd be happy to connect.</p><a class="btn btn-primary btn-lg mr-2 mb-2" href="https://www.linkedin.com/in/kattubadi-mohammad/" target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn">LinkedIn</a><a class="btn btn-outline-primary btn-lg mb-2" href="mailto:miraclemohammad786@gmail.com" aria-label="Send an email to Mohammad">Email Me</a></div></section>
-</main>
-<footer class="py-4 text-center bg-light"><div class="container"><p class="mb-2">© 2026 Kattubadi Mohammad. All rights reserved.</p><div><a class="footer-link" href="https://github.com/kattubadimohammad" target="_blank" rel="noopener noreferrer">GitHub</a><a class="footer-link" href="https://www.linkedin.com/in/kattubadi-mohammad/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="footer-link" href="mailto:miraclemohammad786@gmail.com">Email</a></div></div></footer>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script><script src="script.js"></script>
-</body></html>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Mohammad Kattubadi home"><span class="brand-mark">MK</span><span>Mohammad Kattubadi</span></a>
+      <details class="nav-menu">
+        <summary aria-label="Open navigation menu">Menu <span aria-hidden="true">☰</span></summary>
+        <nav aria-label="Main navigation">
+          <a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a>
+        </nav>
+      </details>
+      <a class="nav-resume" href="resume.pdf" target="_blank" rel="noopener noreferrer">View resume <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> SOURCING TRANSFORMATION · BUSINESS ANALYTICS</p>
+          <h1>Turning operational data into <span>clear decisions.</span></h1>
+          <p class="hero-lead">I'm Mohammad Kattubadi — a business operations and data professional working across sourcing operations, reporting, analytics and applied machine learning.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#experience">Explore my experience <span aria-hidden="true">→</span></a>
+            <a class="button button-secondary" href="resume.pdf" target="_blank" rel="noopener noreferrer">Download resume <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-links">
+            <a href="https://www.linkedin.com/in/kattubadi-mohammad/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <a href="https://github.com/kattubadimohammad" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a href="mailto:miraclemohammad786@gmail.com">Email ↗</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="photo-frame"><img src="images/about/MK_Photo.png" alt="Portrait of Mohammad Kattubadi" width="716" height="895"></div>
+          <div class="floating-note"><span class="note-dot"></span><div><strong>Business + Technology</strong><small>Operations · Analytics · AI</small></div></div>
+          <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
+        </div>
+      </div>
+      <div class="container hero-stats">
+        <div><strong>3+ years</strong><span>Professional experience</span></div>
+        <div><strong>Python · SQL</strong><span>Data &amp; automation</span></div>
+        <div><strong>Power BI · Excel</strong><span>Reporting &amp; insights</span></div>
+        <div><strong>AI / ML</strong><span>Applied projects</span></div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="about">
+      <div class="container narrow">
+        <p class="eyebrow">01 / ABOUT</p>
+        <h2>Connecting business operations with data.</h2>
+        <p class="section-intro">I have 3+ years of experience across e-commerce and marketplace operations, with a growing focus on sourcing transformation, data analytics and machine learning. I enjoy making operational information easier to understand through accurate reporting, structured analysis and practical automation.</p>
+        <div class="focus-grid">
+          <article class="focus-card"><span class="focus-number">A</span><h3>Operational excellence</h3><p>PO monitoring, supplier coordination, exception tracking and process reporting.</p></article>
+          <article class="focus-card"><span class="focus-number">B</span><h3>Analytics &amp; reporting</h3><p>SQL, Excel, Power BI and KPI reporting that turn business data into useful insights.</p></article>
+          <article class="focus-card"><span class="focus-number">C</span><h3>Applied AI &amp; ML</h3><p>Python-based data workflows, predictive modelling, NLP and machine learning projects.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">02 / EXPERIENCE</p><h2>Where I've contributed.</h2></div><p>Experience across sourcing transformation, e-commerce data operations and marketplace execution.</p></div>
+        <div class="timeline">
+          <article class="job-card current">
+            <div class="job-top"><div><span class="job-label">CURRENT ROLE</span><h3>Analyst – Sourcing Transformation</h3><p class="company">Walmart <span>· Contract through PERSOL India</span></p></div><p class="job-date">7 Sep 2026 – Present<br><span>Bengaluru, India</span></p></div>
+            <ul>
+              <li>Process and validate purchase order (PO) revisions, checking key details and supporting the approval workflow.</li>
+              <li>Follow up with suppliers and relevant stakeholders on pending actions, updates and discrepancies.</li>
+              <li>Prepare and maintain TIPS, Daily Performance Summary (DPS) and PO Revision Backlog Status reports.</li>
+              <li>Track pending items and exceptions to support timely follow-ups, reporting accuracy and process visibility.</li>
+            </ul>
+            <p class="job-note">Work is described at a high level; confidential supplier, purchase order and internal business information is not published.</p>
+          </article>
+          <article class="job-card">
+            <div class="job-top"><div><h3>Data Operations Analyst</h3><p class="company">Flipkart <span>· via TeamLease</span></p></div><p class="job-date">Sep 2024 – Sep 2026<br><span>Bengaluru, India</span></p></div>
+            <ul>
+              <li>Produced recurring reports for stock-on-hand (SOH), days on hand (DOH), purchase orders, fill rate, instock percentage and sell-through.</li>
+              <li>Used SQL / FDP SQL and Excel to monitor performance across 16+ business verticals and identify operational exceptions.</li>
+              <li>Supported inventory availability initiatives associated with approximately 98% instock performance across 50+ categories.</li>
+              <li>Contributed to stockout-reduction efforts, with reported reductions of up to 25%, and reporting workflows that reduced manual effort by approximately 15%.</li>
+              <li>Delivered sales and performance analysis used in planning and business reviews.</li>
+            </ul>
+          </article>
+          <article class="job-card">
+            <div class="job-top"><div><h3>E-commerce Operations Executive</h3><p class="company">Lavian LLP</p></div><p class="job-date">Jul 2023 – Aug 2024</p></div>
+            <ul>
+              <li>Supported e-commerce operations and marketplace catalog maintenance across multiple selling channels.</li>
+              <li>Worked with product listings and operational data for a catalog of 16,000+ SKUs, supporting listing accuracy and data quality.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="skills">
+      <div class="container">
+        <p class="eyebrow">03 / TOOLKIT</p><h2>Skills built around real work.</h2>
+        <div class="skills-grid">
+          <article><span class="skill-index">01</span><h3>Data &amp; programming</h3><p>Python, SQL, Pandas, NumPy, Jupyter Notebook</p></article>
+          <article><span class="skill-index">02</span><h3>BI &amp; reporting</h3><p>Power BI, Tableau, Advanced Excel, PivotTables, XLOOKUP, VLOOKUP, SUMIF, COUNTIF</p></article>
+          <article><span class="skill-index">03</span><h3>Machine learning &amp; NLP</h3><p>scikit-learn, XGBoost, Random Forest, Regression, Classification, KNN, SVM, TF-IDF, Forecasting</p></article>
+          <article><span class="skill-index">04</span><h3>Data tools &amp; platforms</h3><p>Streamlit, Git, GitHub, Snowflake, Snowpark, ETL and workflow automation</p></article>
+          <article><span class="skill-index">05</span><h3>Cloud &amp; DevOps</h3><p>Azure, Azure Data Factory, Azure ML, Docker, Kubernetes, Jenkins, GitHub Actions, Terraform</p><small>Working knowledge</small></article>
+          <article><span class="skill-index">06</span><h3>Business operations</h3><p>KPI tracking, MIS reporting, inventory analysis, PO monitoring, instock and fill-rate reporting, supplier follow-up</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="projects">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">04 / SELECTED WORK</p><h2>Projects &amp; experiments.</h2></div><p>Hands-on projects that demonstrate data preparation, modelling, evaluation and practical problem-solving.</p></div>
+        <div class="projects-grid">
+          <article class="project-card project-featured">
+            <div class="project-image"><img src="images/projects/fraud-detection.jpg" alt="Credit card fraud detection project visual" loading="lazy"></div>
+            <div class="project-content"><span class="project-type">MACHINE LEARNING · DEPLOYED DEMO</span><h3>Credit Card Fraud Detection</h3><p>Built a classification workflow to identify potentially fraudulent transactions. Applied data preparation, stratified splitting and SMOTE on training data, then evaluated model performance with fraud-focused metrics.</p>
+              <div class="metric-row"><div><strong>0.9704</strong><span>ROC-AUC</span></div><div><strong>0.8812</strong><span>PR-AUC</span></div><div><strong>0.8454</strong><span>Fraud F1</span></div></div>
+              <p class="tech-list">Python · Pandas · scikit-learn · Random Forest · Streamlit</p><div class="project-actions"><a href="https://credit-card-fraud-detection-0bm5.onrender.com/" target="_blank" rel="noopener noreferrer">Live demo ↗</a><a href="https://github.com/kattubadimohammad/credit-card-fraud-detection" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-image"><img src="images/projects/resume-classification.jpg" alt="AI resume classification project visual" loading="lazy"></div>
+            <div class="project-content"><span class="project-type">NLP · TEXT CLASSIFICATION</span><h3>AI Resume Classification</h3><p>Created an NLP workflow using TF-IDF features and Support Vector Machine to categorize resume content. Project notes report a 25% improvement in screening efficiency.</p><p class="tech-list">Python · NLP · TF-IDF · SVM</p><div class="project-actions"><a href="https://github.com/kattubadimohammad/Resume-Classification" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div>
+          </article>
+          <article class="project-card">
+            <div class="project-image"><img src="images/projects/book-recommendation.jpg" alt="Book recommendation system project visual" loading="lazy"></div>
+            <div class="project-content"><span class="project-type">RECOMMENDATION SYSTEM</span><h3>Book Recommendation System</h3><p>Developed a recommendation project to surface relevant books using available user and item information.</p><p class="tech-list">Python · KNN · Recommendation Systems</p><div class="project-actions"><a href="https://github.com/kattubadimohammad/Book-Recommendation-System" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div>
+          </article>
+          <article class="project-card project-text">
+            <div class="project-content"><span class="project-type">PREDICTIVE ANALYTICS</span><h3>Flight Price Prediction</h3><p>Built a predictive analytics project to estimate flight prices from structured features.</p><p class="tech-list">Python · Data Analysis · Regression</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <div class="container two-column">
+        <div><p class="eyebrow">05 / EDUCATION</p><h2>Learning foundations.</h2><article class="education-card"><h3>B.Tech — Computer Science &amp; Engineering</h3><p>Sree Vahini Institute of Science &amp; Technology</p><p class="education-affiliation">Affiliated to Jawaharlal Nehru Technological University, Kakinada</p><span>2019 – 2023</span></article></div>
+        <div><p class="eyebrow">CREDENTIALS</p><h2>Certifications.</h2><ul class="cert-list"><li><strong>Data Science</strong><span>ExcelR · Jun 2023</span></li><li><strong>Machine Learning</strong><span>RapidMiner</span></li></ul></div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container contact-inner"><p class="eyebrow">06 / CONTACT</p><h2>Let's make data useful.</h2><p>Open to conversations about sourcing transformation, business operations, analytics and data-focused opportunities.</p><div class="hero-actions"><a class="button button-light" href="mailto:miraclemohammad786@gmail.com">Get in touch ↗</a><a class="button button-outline-light" href="https://www.linkedin.com/in/kattubadi-mohammad/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a></div></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>© 2026 Mohammad Kattubadi</span><span>Built with clarity, curiosity &amp; data.</span><div><a href="https://github.com/kattubadimohammad" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/kattubadi-mohammad/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div></div></footer>
+</body>
+</html>

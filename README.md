@@ -1,93 +1,67 @@
 # TechWithMohammad
 
-> **Personal portfolio of Kattubadi Mohammad — Data Science, Data Analytics & E-commerce Operations.**
+> **Portfolio of Mohammad Kattubadi — Sourcing Transformation, Business Operations, Data Analytics and Applied AI.**
 
-🌐 **Live Portfolio:** https://techwithmohammad.netlify.app/
-
-🔗 **GitHub:** https://github.com/kattubadimohammad
-
-💼 **LinkedIn:** https://www.linkedin.com/in/kattubadi-mohammad/
-
-📄 **Resume:** https://github.com/kattubadimohammad/TechWithMohammad/blob/main/resume.pdf
+- **Live portfolio:** https://techwithmohammad.netlify.app/
+- **GitHub:** https://github.com/kattubadimohammad
+- **LinkedIn:** https://www.linkedin.com/in/kattubadi-mohammad/
+- **Resume:** [resume.pdf](resume.pdf)
 
 ## About
 
-TechWithMohammad is my personal portfolio website, built to showcase my professional profile, technical skills, projects, and experience across **Data Science, Data Analytics, Machine Learning, and E-commerce Operations**.
+This portfolio presents my professional experience across sourcing transformation, e-commerce and marketplace operations, alongside practical projects in data analytics and machine learning.
 
-The portfolio is designed to give recruiters and hiring managers a quick view of my work, with links to project repositories and live applications where available.
+It highlights operational reporting, purchase order revision workflows, supplier follow-ups, inventory and KPI analysis, Python, SQL, Power BI, Excel, NLP and applied machine learning.
 
-## Featured Project
+## Featured public project
 
-### 💳 Credit Card Fraud Detection
+### Credit Card Fraud Detection
 
-An end-to-end machine learning project that detects potentially fraudulent credit-card transactions using a **Random Forest classifier**.
+A machine-learning classification project using a Random Forest model and SMOTE applied to training data. The project evaluates performance using fraud-focused metrics, including ROC-AUC, PR-AUC and F1-score.
 
-- Handles severe class imbalance using **SMOTE** on the training data.
-- Uses stratified train/test splitting and evaluates precision, recall, F1-score, ROC-AUC and PR-AUC.
-- Includes a Streamlit web application for interactive transaction analysis.
-- Deployed application: https://credit-card-fraud-detection-0bm5.onrender.com/
-- Repository: https://github.com/kattubadimohammad/credit-card-fraud-detection
+- **Live demo:** https://credit-card-fraud-detection-0bm5.onrender.com/
+- **Repository:** https://github.com/kattubadimohammad/credit-card-fraud-detection
 
-## Key Features
+## Other projects
 
-- 📱 Responsive portfolio design
-- 📊 Data Science & Analytics project showcase
-- 🤖 Machine Learning projects with live demos
-- 🛒 E-commerce Operations experience and skills
-- 🔗 GitHub and live-project links
-- 💼 Professional About, Skills and Contact sections
+- AI Resume Classification — Python, NLP, TF-IDF and SVM
+- Book Recommendation System
+- Flight Price Prediction
 
-## Tech Stack
+## Technology
 
-- **HTML5** — page structure and semantic content
-- **CSS3** — responsive styling, layout and animations
-- **JavaScript** — interactions and dynamic behaviour
-- **Bootstrap** — responsive UI components
-- **Git & GitHub** — version control and project hosting
-- **Netlify** — portfolio deployment
+- **Core:** HTML5, CSS3
+- **Deployment:** Netlify
+- **Version control:** Git and GitHub
 
-## Repository Structure
+The site uses a responsive, custom CSS layout and does not require a front-end framework.
+
+## Repository structure
 
 ```text
 TechWithMohammad/
-├── icons/       # Website icons
-├── images/      # Portfolio images and assets
-├── .gitignore   # Ignored files
-├── LICENSE      # Project license
-├── README.md    # Project documentation
-├── index.html   # Main portfolio page
-├── resume.pdf   # Resume
-├── script.js    # JavaScript functionality
-└── styles.css   # Website styling
+├── images/       # Profile and project images
+├── icons/        # Social icons
+├── index.html    # Main portfolio page
+├── styles.css    # Responsive site styling
+├── resume.pdf    # Resume
+└── README.md     # Project documentation
 ```
 
-## Run Locally
+## Run locally
 
 1. Clone the repository:
-
-```bash
-git clone https://github.com/kattubadimohammad/TechWithMohammad.git
-```
-
-2. Open the project folder:
-
-```bash
-cd TechWithMohammad
-```
-
-3. Open `index.html` in a browser, or use a local development server such as VS Code Live Server.
+   ```bash
+   git clone https://github.com/kattubadimohammad/TechWithMohammad.git
+   ```
+2. Open the project folder.
+3. Open `index.html` in a browser or use a local development server.
 
 ## Deployment
 
-The portfolio is currently published on **Netlify**:
-
-https://techwithmohammad.netlify.app/
+The main branch is connected to Netlify for deployment. Review changes on a separate branch before merging them into `main`.
 
 ## Contact
 
 - **LinkedIn:** https://www.linkedin.com/in/kattubadi-mohammad/
 - **Email:** miraclemohammad786@gmail.com
-
----
-
-⭐ If you find the portfolio useful, feel free to explore the projects and connect with me.
