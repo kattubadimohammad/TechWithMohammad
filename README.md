@@ -2,7 +2,7 @@
 
 > **Portfolio of Mohammad Kattubadi — Sourcing Transformation, Business Operations, Data Analytics and Applied AI.**
 
-- **Live portfolio:** https://techwithmohammad.netlify.app/
+- **Live portfolio:** https://mohammadkattubadi.cv/
 - **GitHub:** https://github.com/kattubadimohammad
 - **LinkedIn:** https://www.linkedin.com/in/kattubadi-mohammad/
 - **Resume:** [resume.pdf](resume.pdf)
